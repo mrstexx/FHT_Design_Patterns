@@ -1,5 +1,6 @@
 package edu.dp.history;
 
+import edu.dp.AbstractManager;
 import edu.dp.IManager;
 
 import java.io.*;
@@ -7,18 +8,20 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HistoryManager implements IManager {
+public final class HistoryManager extends AbstractManager {
     private static IManager historyManager;
-    private List<History> historyList;
+    private List<History> historyList = new ArrayList<>();
 
     private HistoryManager() {
-        historyList = new ArrayList<>();
+        super();
     }
 
-    public List<History> getHistoryList() {
-        return historyList;
-    }
-
+    /**
+     * Add history entry to history list. Also, automatically saved to the file history.txt
+     *
+     * @param name     User name
+     * @param dateTime current datetime
+     */
     public void addEntry(String name, LocalDateTime dateTime) {
         historyList.add(new History(name, dateTime));
         saveHistoryToFile();
@@ -45,15 +48,7 @@ public class HistoryManager implements IManager {
         }
     }
 
-    public synchronized static IManager getLazyInstance() {
-        // lazy singleton method
-        if (historyManager != null) {
-            return historyManager;
-        }
-        historyManager = new HistoryManager();
-        return historyManager;
-    }
-
+    // try to find a way to have getInstance as abstract method, but abstract and static doesn't work together.
     public static IManager getInstance() {
         // thread safe and double check singleton method
         if (historyManager == null) {

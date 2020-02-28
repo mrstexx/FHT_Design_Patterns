@@ -31,7 +31,7 @@ public class History {
     }
 
     public String toString() {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-YYYY HH:mm");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-YYYY, HH:mm");
         return this.getUserName() + ", " + this.getDateTime().format(formatter);
     }
 }
