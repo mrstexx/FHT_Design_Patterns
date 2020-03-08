@@ -1,0 +1,25 @@
+{
+  "assault": {
+    "magazineSize": 30,
+    "hitPoints": 43,
+    "weight": 2.9,
+    "length": 756,
+    "caliber": 5.56,
+    "modelName": "M4 Carabine",
+    "supportAttachments": true,
+    "attachments": [
+      "RedDot",
+      "Vertical Grip"
+    ]
+  },
+  "sniper": {
+    "magazineSize": 5,
+    "hitPoints": 80,
+    "weight": 5.50,
+    "length": 1092,
+    "caliber": 7.62,
+    "modelName": "M24",
+    "scopeSize": 8,
+    "silencerSupport": true
+  }
+}
