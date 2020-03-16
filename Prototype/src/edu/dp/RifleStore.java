@@ -1,14 +1,11 @@
 package edu.dp;
 
 import com.google.gson.Gson;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
 import edu.dp.rifle.ERifleType;
 import edu.dp.rifle.Rifle;
 
 import java.io.IOException;
 import java.io.Reader;
-import java.lang.reflect.InvocationTargetException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.HashMap;
@@ -44,7 +41,7 @@ public class RifleStore {
         }
     }
 
-    public static Rifle getInstance(String rifleType) {
+    public synchronized static Rifle getInstance(String rifleType) {
         Rifle rifle = null;
         rifle = prototypes.get(rifleType);
         if (rifle != null) {
