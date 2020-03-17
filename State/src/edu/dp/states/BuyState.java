@@ -3,10 +3,10 @@ package edu.dp.states;
 import edu.dp.Game;
 
 public class BuyState implements IState {
+
     @Override
     public void buyGame(Game game) {
-        System.out.println("Game purchased");
-        game.setCurrentState(new BuyState());
+        System.out.println("Game already purchased");
     }
 
     @Override

@@ -1,6 +1,7 @@
 package edu.dp;
 
 import edu.dp.states.IState;
+import edu.dp.states.NeutralState;
 
 public class Game {
 
@@ -8,6 +9,7 @@ public class Game {
     private String gameName;
 
     public Game(String gameName) {
+        this.currentState = new NeutralState();
         this.gameName = gameName;
     }
 

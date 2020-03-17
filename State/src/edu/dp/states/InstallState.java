@@ -15,8 +15,7 @@ public class InstallState implements IState {
 
     @Override
     public void installGame(Game game) {
-        System.out.println("Installing game...");
-        game.setCurrentState(new InstallState());
+        System.out.println("Game already installed");
     }
 
     @Override

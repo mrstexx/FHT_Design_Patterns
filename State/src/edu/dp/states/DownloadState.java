@@ -10,8 +10,7 @@ public class DownloadState implements IState {
 
     @Override
     public void downloadGame(Game game) {
-        System.out.println("Downloading game...");
-        game.setCurrentState(new DownloadState());
+        System.out.println("Game already downloaded");
     }
 
     @Override
