@@ -1,19 +1,21 @@
 package edu.dp;
 
+import edu.dp.states.IState;
+
 public class Game {
 
-    private IGameState currentState;
+    private IState currentState;
     private String gameName;
 
     public Game(String gameName) {
         this.gameName = gameName;
     }
 
-    public IGameState getCurrentState() {
+    public IState getCurrentState() {
         return currentState;
     }
 
-    public void setCurrentState(IGameState currentState) {
+    public void setCurrentState(IState currentState) {
         this.currentState = currentState;
     }
 

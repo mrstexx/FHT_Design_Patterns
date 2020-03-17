@@ -1,9 +1,8 @@
 package edu.dp.states;
 
 import edu.dp.Game;
-import edu.dp.IGameState;
 
-public class UninstallState implements IGameState {
+public class UninstallState implements IState {
     @Override
     public void buyGame(Game game) {
         System.out.println("Game already purchased");

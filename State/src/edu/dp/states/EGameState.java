@@ -1,4 +1,4 @@
-package edu.dp;
+package edu.dp.states;
 
 public enum EGameState {
     PURCHASED("Purchased"),

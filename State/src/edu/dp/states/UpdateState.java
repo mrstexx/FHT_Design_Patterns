@@ -1,9 +1,8 @@
 package edu.dp.states;
 
 import edu.dp.Game;
-import edu.dp.IGameState;
 
-public class UpdateState implements IGameState {
+public class UpdateState implements IState {
 
     @Override
     public void buyGame(Game game) {

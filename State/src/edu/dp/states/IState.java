@@ -1,6 +1,8 @@
-package edu.dp;
+package edu.dp.states;
 
-public interface IGameState {
+import edu.dp.Game;
+
+public interface IState {
     public void buyGame(Game game);
 
     public void downloadGame(Game game);
