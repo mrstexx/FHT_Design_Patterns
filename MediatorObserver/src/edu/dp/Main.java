@@ -18,6 +18,19 @@ public class Main {
         buttonDialog.register(listSelectionObserver);
         listDialog.register(listSelectionObserver);
 
+        // test different cases
+        buttonDialog.clickAddNew("Test 1");
+        buttonDialog.clickAddNew("Test 2");
+        buttonDialog.clickAddNew("Test 3");
+
+        listDialog.selectItem(2);
+        listDialog.selectItem(0);
+        listDialog.deselectItem(0);
+        listDialog.deselectItem(2);
+
+        buttonDialog.clickAddNew("Test 4");
+        listDialog.selectItem(3);
+        buttonDialog.clickUpdateSelected("Update test 4");
 
     }
 }

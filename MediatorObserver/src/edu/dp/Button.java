@@ -26,7 +26,7 @@ public class Button {
         isDisabled = false;
     }
 
-    public void click() {
-        // on click do something
+    public String getState() {
+        return isDisabled ? "Disabled" : "Enabled";
     }
 }

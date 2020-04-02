@@ -24,16 +24,16 @@ public class ListDialog extends AbstractDialog implements ISubject {
         notify(ESelectionState.getState(getSelectedCount()), null);
     }
 
-    public void addIListItem(String text) {
+    private void addIListItem(String text) {
         allItems.add(new ListItem(text));
     }
 
-    public void removeItem(int id) {
+    private void removeItem(int id) {
         selectedItems.remove(allItems.get(id));
         allItems.remove(id);
     }
 
-    public void updateItem(int id, String text) {
+    private void updateItem(int id, String text) {
         allItems.get(id).setText(text);
     }
 
@@ -77,11 +77,18 @@ public class ListDialog extends AbstractDialog implements ISubject {
             // only element in the list has id 0
             updateItem(0, (String) data);
         }
+        logger();
     }
 
     private void removeSelectedItems() {
         for (int i = 0; i < selectedItems.size(); i++) {
             removeItem(i);
         }
+    }
+
+    private void logger() {
+        System.out.println("******** List Dialog ********");
+        System.out.println("Number of items: " + allItems.size());
+        System.out.println("Number of selected items: " + selectedItems.size());
     }
 }

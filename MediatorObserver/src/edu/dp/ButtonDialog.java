@@ -18,19 +18,22 @@ public class ButtonDialog extends AbstractDialog implements ISubject {
     }
 
     public void clickAddNew(String value) {
-        if (!updateButton.isDisabled()) {
+        if (!addButton.isDisabled()) {
+            System.out.println("Clicked add button");
             notify(EButtonAction.ADD, value);
         }
     }
 
     public void clickRemoveSelected() {
         if (!removeButton.isDisabled()) {
+            System.out.println("Clicked remove button");
             notify(EButtonAction.REMOVE, null);
         }
     }
 
     public void clickUpdateSelected(String value) {
         if (!updateButton.isDisabled()) {
+            System.out.println("Clicked update button");
             notify(EButtonAction.UPDATE, value);
         }
     }
@@ -68,5 +71,13 @@ public class ButtonDialog extends AbstractDialog implements ISubject {
             removeButton.enable();
             updateButton.disable();
         }
+        logger();
+    }
+
+    private void logger() {
+        System.out.println("******** Button Dialog ********");
+        System.out.println("Add Button: " + addButton.getState());
+        System.out.println("Update Button: " + updateButton.getState());
+        System.out.println("Remove Button: " + removeButton.getState());
     }
 }

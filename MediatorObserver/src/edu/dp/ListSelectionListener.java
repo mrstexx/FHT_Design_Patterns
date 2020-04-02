@@ -5,7 +5,6 @@ import java.util.List;
 
 public class ListSelectionListener implements IObserver, IMediator<AbstractDialog> {
 
-    private ESelectionState state = null;
     private List<AbstractDialog> colleagues = new ArrayList<>();
 
     @Override
@@ -27,7 +26,6 @@ public class ListSelectionListener implements IObserver, IMediator<AbstractDialo
 
     @Override
     public void update(Object sender, Object value, Object data) {
-        state = (ESelectionState) value;
         notify((AbstractDialog) sender, value, data);
     }
 }
