@@ -1,5 +1,5 @@
 package edu.dp;
 
 public interface IObserver {
-    public void update(Object value);
+    void update(Object sender, Object value, Object data);
 }
