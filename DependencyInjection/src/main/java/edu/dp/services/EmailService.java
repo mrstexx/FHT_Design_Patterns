@@ -1,6 +1,10 @@
 package edu.dp.services;
 
+import org.springframework.stereotype.Service;
+
+@Service("EmailService")
 public class EmailService implements IMessageService {
+
     @Override
     public boolean sendMessage(String msg, String receiver) {
         System.out.println("-----------------------------");

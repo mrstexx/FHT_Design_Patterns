@@ -9,6 +9,7 @@ public class MyApplication {
 
     private IMessageService service;
 
+    // place where magic happens
     @Autowired
     public void setService(IMessageService service) {
         this.service = service;
